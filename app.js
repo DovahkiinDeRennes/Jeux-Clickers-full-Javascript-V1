@@ -27,6 +27,8 @@ let buff1Applied = localStorage.getItem('buff1Applied') === 'true';
 let buff2Applied = localStorage.getItem('buff2Applied') === 'true';
 let buff3Applied = localStorage.getItem('buff3Applied') === 'true';
 let buff4Applied = localStorage.getItem('buff4Applied') === 'true';
+let buffSecretApplied = localStorage.getItem('buffSecretApplied') === 'true';
+
 
 if (buff1Applied === true){
     unParUn += 10;
@@ -58,6 +60,14 @@ if (buff4Applied === true){
         console.log('+100');
     }, 5000);
 }
+
+if (buffSecretApplied === true){
+    unParUn += 1000000000;
+    AffichageDesCoins();
+}
+
+
+
 
 
 // Fonction pour mettre à jour le nombre de coins et le localStorage
@@ -97,6 +107,13 @@ function IncrementerLeCompteur() {
             let buff4 = document.getElementById('buff4');
             if (buff4) {
                 buff4.addEventListener("click", Buff4, { once: true });
+            }
+        }
+
+        if (nombreDeCoin >= 1 && !buffSecretApplied){
+            let buffSecret = document.getElementById('buffSecret1');
+            if (buffSecret){
+                buffSecret.addEventListener("click", SecretBuff, { once: true });
             }
         }
     });
@@ -148,6 +165,14 @@ function Buff4() {
     localStorage.setItem('buff4Applied', 'true');
 }
 
+function SecretBuff(){
+    unParUn += 1000000000;
+    nombreDeCoin -= 1;
+    AffichageDesCoins();
+    buffSecretApplied = true;
+    localStorage.setItem('buffSecretApplied', 'true');
+}
+
 // Fonction pour réinitialiser le jeu
 // Fonction pour réinitialiser le jeu
 // Fonction pour réinitialiser le jeu
@@ -165,6 +190,7 @@ function Reset() {
         buff2Applied = false;
         buff3Applied = false;
         buff4Applied = false;
+        buffSecretApplied = false;
 
         // Réinitialiser les buffs dans le localStorage
         localStorage.removeItem('nombreDeCoin');
@@ -172,6 +198,7 @@ function Reset() {
         localStorage.removeItem('buff2Applied');
         localStorage.removeItem('buff3Applied');
         localStorage.removeItem('buff4Applied');
+        localStorage.removeItem('buffSecretApplied');
 
         // Arrêter les intervalles actifs
         let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
@@ -185,36 +212,7 @@ function Reset() {
         // Réinitialiser l'affichage des boutons et des visibilités
      
 
-        // Réinitialiser les boutons des buffs
-        let buff1 = document.getElementById('buff1');
-        let buff2 = document.getElementById('buff2');
-        let buff3 = document.getElementById('buff3');
-        let buff4 = document.getElementById('buff4');
-
-        if (buff1) {
-            buff1.removeEventListener("click", Buff1);
-            buff1.addEventListener("click", Buff1, { once: true });
-        }
-
-        if (buff2) {
-            buff2.removeEventListener("click", Buff2);
-            buff2.addEventListener("click", Buff2, { once: true });
-        }
-
-        if (buff3) {
-            buff3.removeEventListener("click", Buff3);
-            buff3.addEventListener("click", Buff3, { once: true });
-        }
-
-        if (buff4) {
-            buff4.removeEventListener("click", Buff4);
-            buff4.addEventListener("click", Buff4, { once: true });
-        }
-
-        // Remettre en place l'incrémentation du compteur
-        let ajoutCoin = document.getElementById('ajoutCoin');
-        ajoutCoin.removeEventListener("click", incrementListener);
-        ajoutCoin.addEventListener("click", incrementListener);
+   
 
     }
     });
