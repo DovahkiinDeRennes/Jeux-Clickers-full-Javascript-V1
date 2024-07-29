@@ -1,23 +1,109 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let logoClicker = document.getElementById('logo');
 let visible1 = document.getElementById('logo1');
 let logoClicker2 = document.getElementById('logo2');
-
+let tempsChargement = document.getElementById('chargement');
 
 logoClicker.addEventListener('click', function() {
     logoClicker.style.visibility = 'hidden';
     logoClicker2.style.visibility = 'hidden';
-    visible1.style.visibility = 'visible'
-    
+    tempsChargement.style.visibility = 'visible';
+    tempsChargement.classList.add('fadeInDownBig');
+    tempsChargement.classList.remove('fadeOutDownBig');
+    visible1.classList.remove('fadeOutLeftBig')
+    visible1.classList.remove('fadeInRightBig');
+
+    setTimeout(function() {
+        visible1.style.visibility = 'visible';
+        visible1.classList.add('fadeInRightBig')
+       
+        tempsChargement.classList.remove('fadeInDownBig');
+        tempsChargement.classList.add('fadeOutDownBig');
+        setTimeout(function(){
+            tempsChargement.style.visibility = 'hidden';
+        },1000)
+    }, 3000);
 });
 
+
 let close = document.getElementById('fermerJeux');
+let confirmationHtml = document.getElementById('confirmation');
+let oui = document.getElementById('oui');
+let non = document.getElementById('non');
+
 
 close.addEventListener('click', function(){
 
-     logoClicker.style.visibility = 'visible';
-    visible1.style.visibility = 'hidden'
-    logoClicker2.style.visibility = 'visible';
+    logo1.classList.add('flou')
+    confirmationHtml.style.visibility = 'visible';
+    
+    oui.addEventListener('click',function(){
+    visible1.classList.add('fadeOutLeftBig')
+    setTimeout(function(){
+        logoClicker.style.visibility = 'visible';
+        visible1.style.visibility = 'hidden';
+        logoClicker2.style.visibility = 'visible';
+        confirmationHtml.style.visibility = 'hidden';
+        
+    logo1.classList.remove('flou')
+    },1000)
+
+   
 })
+
+non.addEventListener('click', function(){
+    confirmationHtml.style.visibility = 'hidden';
+    
+    logo1.classList.remove('flou')
+})
+
+
+
+
+})
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let nombreDeCoin = localStorage.getItem('nombreDeCoin') ? parseInt(localStorage.getItem('nombreDeCoin')) : 0;
@@ -226,3 +312,26 @@ Reset();
 
 // ANIMATION
 
+
+
+// // Auto Clicker en JavaScript
+// (function() {
+//     // Intervalle de temps entre chaque clic en millisecondes
+//     var interval = 500; // 1000 ms = 1 seconde
+
+//     // Fonction de clic automatique
+//     function autoClick() {
+//         // Sélectionne le bouton ou l'élément que tu veux cliquer
+//         var button = document.getElementById('ajoutCoin'); // Modifie ce sélecteur selon tes besoins
+
+//         if (button) {
+//             button.click();
+//             console.log('Button clicked!');
+//         } else {
+//             console.log('Button not found!');
+//         }
+//     }
+
+//     // Démarre l'auto clicker
+//     setInterval(autoClick, interval);
+// })();
