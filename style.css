@@ -7,7 +7,7 @@ html, body {
 
 
 body{
-    background-image: url(image/windows_xp_original-wallpaper-2048x1152.jpg);
+    background-image: url(image/téléchargement.gif);
     background-repeat: no-repeat; /* Ne pas répéter l'image */
     background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
     background-position: center center; /* Centrer l'image */
@@ -17,6 +17,7 @@ body{
     height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
     display: flex;
     flex-direction: column; /* Utilise flexbox pour la disposition */
+    align-items: center
 }
 
 
@@ -28,15 +29,15 @@ body{
 
 .box{
     background: #ff0040;
-clip-path:ellipse(50% 50%);
+
 padding: 10px;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 400px;
+width: 380px;
 height: 400px;
-border: 10px solid black;
-border-radius: 50%;
+border: 5px solid rgb(117 29 70);
+
 position: relative;
 transition: transform 0.1s, box-shadow 0.1s;
 color: white;
@@ -61,48 +62,82 @@ body{
 }
 
 
-
-
-.margG{
-margin-left: 100px;
+.aGauche{
+    display: flex;
+    justify-content: flex-end;
     flex-direction: column;
-display: flex;
-border: 10px solid black;
-padding: 10px;
-color: white;
-background: rgb(255,0,64);
-background: radial-gradient(circle, rgba(255,0,64,1) 5%, rgba(255,192,0,1) 95%);
-overflow:auto;
-height: 402px;
-scrollbar-color: #346abf rgb(0, 0, 0); 
-scrollbar-base-color: black;
-scrollbar-width: none;
+    align-items: flex-end;
+gap: 10px;
+margin-right: 30px;
 
 }
 
+.margG{
+    border-radius: 10px;
+flex-direction: column;
+display: flex;
+border: 5px solid rgb(117 29 70);
+padding: 10px;
+color:  rgb(255,0,64);
+/* overflow:auto; */
+/* scrollbar-color: #346abf rgb(0, 0, 0); 
+scrollbar-base-color: black;
+scrollbar-width: none; */
+width: 410px;
+height: 570px;
+background-color: #180011a2;
+}
+
 .reset{
-    background: rgb(255,0,64);
-background: linear-gradient(211deg, rgba(255,0,64,1) 5%, rgba(255,192,0,1) 95%);
-    width: 100px;
+    background-color: rgb(0, 0, 0);
+
+width: 380px;
     height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    padding: 10px;
     z-index: 1;
-    top: 335px;
-    left: 330;
-    clip-path:ellipse(50% 50%);
-    border: 10px solid black;
-    border-radius: 50%;
-color: white;
+    filter: grayscale(1);
+    color:  rgb(255,0,64);
+    border: 5px solid rgb(117 29 70);
+   
+
 
 }
 
 .reset:hover{
     animation: myAnim 2s ease 0s 1 normal forwards;
+    filter: grayscale(0)
 }
+
+
+.fermer{
+    /* background-image: url(image/croix.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background-color: rgb(0, 0, 0);
+    width: 380px;
+    height: 100px;
+    border: 5px solid rgb(117 29 70);
+    position: relative;
+    filter: grayscale(1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  rgb(255,0,64);
+}
+
+.fermer:hover{
+   filter: grayscale(0);
+   animation: customAni 1s ease-in-out 0s infinite normal none;
+}
+
+
+
 @keyframes myAnim {
 	0% {
 		animation-timing-function: ease-out;
@@ -131,64 +166,99 @@ color: white;
 	}
 }
 
+@keyframes customAni {
+    0% {
+      transform: translate(0);
+    }
+  
+    10% {
+      transform: translate(-2px, -2px);
+    }
+  
+    20% {
+      transform: translate(2px, -2px);
+    }
+  
+    30% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(2px, 2px);
+    }
+  
+    50% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, -2px);
+    }
+  
+    70% {
+      transform: translate(-2px, 2px);
+    }
+  
+    80% {
+      transform: translate(-2px, -2px);
+    }
+  
+    90% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+
 
 .affichageCoin{
-    background: rgb(255,0,64);
-    background: linear-gradient(0deg, rgba(255,0,64,1) 14%, rgba(255,192,0,1) 100%);
-    width: 420px;
+    border-radius: 10px;
+    width: 430px;
     height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-  position: absolute;
+  position: relative;
   z-index: 1;
-  border: 10px solid black;
-  color: white;
-  
+  background-color: #180011a2;
+  color:  rgb(255,0,64);
+  border: 5px solid rgb(117 29 70);
 }
 
 
-.fermer{
-    background-image: url(image/croix.png);
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
-    background-position: center center; /* Centrer l'image */
-    width: 80px;
-    height: 80px;
-    left: 1005px;
-    bottom: 40px;
-    position: relative;
-    filter: grayscale(1)
+
+
+.aug{
+bottom: 145px;
+position: relative;
+visibility: hidden;
+gap: 100px;
 }
-
-.fermer:hover{
-   filter: grayscale(0)
-}
-
-
 
 .contourJeux{
-    border: 5px solid rgb(255, 115, 0);
-padding: 20px;
+    background-color: #180011a2;
+    
+    border: 5px solid rgb(117 29 70);
+padding: 10px;
 /*background-color: rgb(202, 202, 194);*/
-visibility: hidden;
-margin: auto;
-bottom: 175px;
+
+margin-left: 30px;
+border-radius: 10px;
 position: relative;
-background-image: url(image/sunshine-sky-sunset-orange-palm-tree-sunrise-1455477-pxhere.com.jpg);
-background-repeat: no-repeat; /* Ne pas répéter l'image */
-background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
-background-position: center center; /* Centrer l'image */
-z-index: 1;
 
 
 
 }
 
 .flex {
+    
     display: flex;
- 
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .prendreTouteLaPlace{
@@ -215,18 +285,22 @@ h2{
  
 }
 
-
+a, p{
+    font-family: 'titreFont', sans-serif;
+  
+ 
+}
 
 
 .logoClickers {
-    height: 180px;
-    width: 120px;
-    background-image: url(image/Coins.png);
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
-    background-position: center center; /* Centrer l'image */
+    height: 125px;
+    width: 155px;
+    background-image: url(image/logoSite2.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     visibility: visible;
-    
+    clip-path: ellipse(40% 45%);
 }
 
 .text {
@@ -235,6 +309,8 @@ h2{
     text-align: center; /* Centrer le texte */
     margin-top: -35px;
     font-family: 'titreFont', sans-serif;
+    z-index: 2;
+    color: #ffffff;
 }
 
 
@@ -245,15 +321,15 @@ h2{
     justify-content: center; /* Centre les enfants verticalement si nécessaire */
     
 /*right: 215px;*/
-margin-right: auto;
+margin: 0;
     position: relative;
-bottom: 200px;
+bottom: 85px;
 }
 
 .logoClickers:hover{
-    filter: sepia(100%) brightness(97%) hue-rotate(160deg) saturate(333%) contrast(75%) invert(100%);
-    -webkit-filter: sepia(100%) brightness(97%) hue-rotate(160deg) saturate(333%) contrast(75%) invert(100%);
-    -moz-filter: sepia(100%) brightness(97%) hue-rotate(160deg) saturate(333%) contrast(75%) invert(100%);
+    filter: brightness(70%) saturate(545%) contrast(97%);
+    -webkit-filter: brightness(70%) saturate(545%) contrast(97%);
+    -moz-filter: brightness(70%) saturate(545%) contrast(97%);
 }
 
 
@@ -277,28 +353,42 @@ bottom: 200px;
 }
 
 #buff1:hover{
-    background-color: #ff2600;
+    background-color: #ffffff;
 }
 #buff2:hover{
-    background-color: #ff2600;
+    background-color: #ffffff;
 }
 #buff3:hover{
-    background-color: #ff2600;
+    background-color: #ffffff;
 }
 #buff4:hover{
-    background-color: #ff2600;
+    background-color: #ffffff;
 }
 
 #buffSecret1:hover{
-    background-color: #ff2600;
+    background-color: #ffffff;
 }
 
+.github{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.image{
+    width: 100px;
+    height: 100px;
+}
 
+.github a {
+    color: #ffffff;
+    text-decoration: none;
+}
 .confirmationDiv{
     color: white;
     background: rgb(255,0,64);
-    background: radial-gradient(circle, rgba(255,0,64,1) 5%, rgba(255,192,0,1) 95%);
+    border: 5px solid rgb(117 29 70);
     visibility: hidden;
     width: 215px;
     height: 200px;
@@ -306,12 +396,12 @@ bottom: 200px;
     margin: auto;
     z-index: 2;
     top:300px;
-    border: 10px solid black;
+  padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
+    border-radius: 10px;
 }
 .gap{
     gap: 30px;
@@ -357,4 +447,8 @@ button.epure:focus {
   .flou{
     filter: blur(5px);
     z-index: 1;
+  }
+  .color{
+    color: white;
+    font-family: 'titreFont', sans-serif;
   }

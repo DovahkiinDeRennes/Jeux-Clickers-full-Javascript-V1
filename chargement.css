@@ -1,18 +1,18 @@
 .dots {
     width: 100px;
-    height: 170px;
+    height: 100px;
     clip-path: ellipse(50% 50%);
-    background-color: aliceblue;
+    background-color: #180011;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
     visibility: hidden;
     margin: auto;
-    position: relative;
+    position: absolute;
     top: 250px;
     padding: 15px;
-    border: 10px solid black;
+    border: 5px solid rgb(117 29 70);
     border-radius: 50%;
   }
   
@@ -20,7 +20,7 @@
     width: 0.8em;
     height: 0.8em;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #ffffff;
     animation: fade 0.8s ease-in-out alternate infinite;
   }
   

@@ -10,9 +10,13 @@
 <body >
 
 
+
+
+
+
+<!-- ------------------------------------confirmeQuitter------------------------------------ -->
 <div class="confirmationDiv" id="confirmation">
     <p>Êtes-vous sur de vouloir quitter?</p>
-
 <div class="gap">
 <button class="epure" id="oui">Oui</button>
 <button class="epure" id="non">Non</button>
@@ -20,77 +24,108 @@
 
 </div>
 
+<!-- ------------------------------------confirmeReset------------------------------------ -->
+
+<div class="confirmationDiv" id="confirmationReset">
+    <p>Êtes-vous sur de vouloir reset la partie?</p>
+<div class="gap">
+<button class="epure" id="oui2">Oui</button>
+<button class="epure" id="non2">Non</button>
+</div>
+
+</div>
 
 
-
-
-    <div class="dots" id="chargement">
+<!-- ------------------------------------chargement------------------------------------ -->
+<div class="dots" id="chargement">
         <DIV></DIV>
         <DIV></DIV>
         <DIV></DIV>
-      </div>
-<div class="toutLogo">
-<div class="logoClickers" id="logo" ></div>
+</div>
 
 
 
+<!-- ------------------------------------logo------------------------------------ -->
+<div class="toutLogo" id="logo">
+    <div class="color" >
+        Appuyez sur le logo du jeu pour commencer
+    </div>
+<div class="logoClickers" id="logo1">
+
+</div>
 <p class="text" id="logo2">COINS CLICKERS</p>
+
 </div>
 
-<div class="flex contourJeux" id="logo1" >
-    
-    <div class="fermer" id="fermerJeux"></div>
 
-    <div class="carre" >
-    
-<div>
-    <div class="affichageCoin"> 
-        <h1 id="affichageCoin">Nombre de coins</h1><br><br>
+
+<!-- ------------------------------------les buffs + nombre de coins------------------------------------ -->
+<div class="flex aug" id="cacher">
+
+    <div class="aGauche">
+        <div class="affichageCoin"> 
+            <h1 id="affichageCoin">Nombre de coins</h1><br><br>
+        </div>
+        <div class="margG" id="logo2">
+            <div id="buff1">
+                <h2>+10 = 10 coins</h2> 
+            </div>
+            <div id="buff2">
+                <h2>+1 toutes les 2 secondes = 100 coins</h2> 
+            </div>
+            <div id="buff3">
+                <h2>+1000 = 1000 coins</h2>
+            </div>
+            <div id="buff4">
+                <h2>+100 toutes les 5 secondes = 10000 coins</h2>
+            </div>
+            <div id="buff5">
+                <h2>En cours de deploiement</h2>
+            </div>
+            <div id="buff6">
+                <h2>En cours de deploiement</h2>
+            </div>
+            <div id="buffSecret1">
+                <h2>Secret = 100000 coins</h2>
+            </div>  
+        </div>
     </div>
-<div class="flex">
-    <div id="ajoutCoin" class="box">
 
-       
-        <h1>CLIQUE ICI</h1><br><br>
+    <div class="github">
+        <a href="https://github.com/DovahkiinDeRennes" target="_blank">
+        <img  class="image" src="image/github.png">
+        <a href="https://github.com/DovahkiinDeRennes" target="_blank">ByDovahkiiDeRennes</a>
+        </a>
+    </div>
+
+    <div class="flex contourJeux">
         
+        <div class="carre">
+            <div>
+                <div class="fermer" id="fermerJeux">
+                    <h1>Quitter?</h1>
+                </div>
+                <div class="flex">
+                    <div id="ajoutCoin" class="box">
+                        <h1>CLIQUE ICI</h1>
+                    </div>
+                </div>
+                <div class="reset" id="reset">
+                    <h1>RESET</h1>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="reset" id="reset">
-        <h1 >RESET</h1>
-   </div>
-</div>
-   
-</div>
 
-</div>
- <div class="margG" id="logo2">
-    <div id="buff1">
-        <h2 >+10 = 10 coins</h2> 
-    </div>
-    <div id="buff2">
-        <h2 >+1 toutes les 2 secondes  = 100 coins</h2> 
-    </div>
-    <div id="buff3">
-        <h2 >+1000 = 1000 coins</h2>
-    </div>
-    <div id="buff4">
-        <h2 >+100 toutes les 5 secondes = 10000 coins</h2>
-    </div>
-    <div id="buff5">
-        <h2 >En cours de deploiement</h2>
-    </div>
-    <div id="buff6">
-        <h2 >En cours de deploiement</h2>
-    </div>
-    <div id="buffSecret1">
-        <h2 >Secret = 100000 coins</h2>
-    </div>  
-    </div>
 </div>
 
 
-<footer class="sticky-footer">
-    <a href="https://github.com/DovahkiinDeRennes">GITHUB</a>
-</footer>
+
+
+<!-- ------------------------------------Footer------------------------------------ -->
+
+
+
 
 </body>
 </html>

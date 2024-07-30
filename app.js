@@ -24,11 +24,13 @@
 
 
 let logoClicker = document.getElementById('logo');
-let visible1 = document.getElementById('logo1');
+let visible1 = document.getElementById('cacher');
 let logoClicker2 = document.getElementById('logo2');
+let logoClicker3 = document.getElementById('logo1');
 let tempsChargement = document.getElementById('chargement');
 
 logoClicker.addEventListener('click', function() {
+    logoClicker3.style.visibility = 'hidden';
     logoClicker.style.visibility = 'hidden';
     logoClicker2.style.visibility = 'hidden';
     tempsChargement.style.visibility = 'visible';
@@ -58,7 +60,10 @@ let non = document.getElementById('non');
 
 close.addEventListener('click', function(){
 
-    logo1.classList.add('flou')
+    
+    visible1.classList.add('flou');
+
+
     confirmationHtml.style.visibility = 'visible';
     
     oui.addEventListener('click',function(){
@@ -68,8 +73,8 @@ close.addEventListener('click', function(){
         visible1.style.visibility = 'hidden';
         logoClicker2.style.visibility = 'visible';
         confirmationHtml.style.visibility = 'hidden';
-        
-    logo1.classList.remove('flou')
+        logoClicker3.style.visibility = 'visible';
+        visible1.classList.remove('flou')
     },1000)
 
    
@@ -78,17 +83,71 @@ close.addEventListener('click', function(){
 non.addEventListener('click', function(){
     confirmationHtml.style.visibility = 'hidden';
     
-    logo1.classList.remove('flou')
+    visible1.classList.remove('flou')
+})
+
 })
 
 
+let confirmationReset = document.getElementById('confirmationReset')
+let resetStorage = document.getElementById('reset');
+let oui2 = document.getElementById('oui2');
+let non2 = document.getElementById('non2');
+
+resetStorage.addEventListener('click',function(){
+
+    visible1.classList.add('flou');
+    confirmationReset.style.visibility = 'visible';
+
+    oui2.addEventListener('click', function(){
+        confirmationReset.style.visibility = 'hidden';
+        visible1.classList.remove('flou');
+
+        if (oui2){
+            // Réinitialiser les valeurs locales
+            nombreDeCoin = 0;
+            unParUn = 1;
+            buff1Applied = false;
+            buff2Applied = false;
+            buff3Applied = false;
+            buff4Applied = false;
+            buffSecretApplied = false;
+    
+            // Réinitialiser les buffs dans le localStorage
+            localStorage.removeItem('nombreDeCoin');
+            localStorage.removeItem('buff1Applied');
+            localStorage.removeItem('buff2Applied');
+            localStorage.removeItem('buff3Applied');
+            localStorage.removeItem('buff4Applied');
+            localStorage.removeItem('buffSecretApplied');
+    
+            // Arrêter les intervalles actifs
+            let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+            for (let i = 1; i < interval_id; i++) {
+                window.clearInterval(i);
+            }
+    
+            // Mettre à jour l'affichage des coins
+            AffichageDesCoins();
+    
+            // Réinitialiser l'affichage des boutons et des visibilités
+         
+    
+       
+    
+        }
+    })
+
+
+
+    non2.addEventListener('click', function(){
+        confirmationReset.style.visibility = 'hidden';
+        
+        visible1.classList.remove('flou')
+    })
 
 
 })
-
-
-
-
   
 
 
@@ -262,47 +321,47 @@ function SecretBuff(){
 // Fonction pour réinitialiser le jeu
 // Fonction pour réinitialiser le jeu
 // Fonction pour réinitialiser le jeu
-function Reset() {
-    let resetStorage = document.getElementById('reset');
+// function Reset() {
+//     // let resetStorage = document.getElementById('reset');
     
-    resetStorage.addEventListener("click", function() {
-        let resetConf = confirm('Etes vous sur de vouloir reintialiser le compteur?')
+//     resetStorage.addEventListener("click", function() {
+//         // let resetConf = confirm('Etes vous sur de vouloir reintialiser le compteur?')
 
-        if (resetConf){
-        // Réinitialiser les valeurs locales
-        nombreDeCoin = 0;
-        unParUn = 1;
-        buff1Applied = false;
-        buff2Applied = false;
-        buff3Applied = false;
-        buff4Applied = false;
-        buffSecretApplied = false;
+//         if (oui2){
+//         // Réinitialiser les valeurs locales
+//         nombreDeCoin = 0;
+//         unParUn = 1;
+//         buff1Applied = false;
+//         buff2Applied = false;
+//         buff3Applied = false;
+//         buff4Applied = false;
+//         buffSecretApplied = false;
 
-        // Réinitialiser les buffs dans le localStorage
-        localStorage.removeItem('nombreDeCoin');
-        localStorage.removeItem('buff1Applied');
-        localStorage.removeItem('buff2Applied');
-        localStorage.removeItem('buff3Applied');
-        localStorage.removeItem('buff4Applied');
-        localStorage.removeItem('buffSecretApplied');
+//         // Réinitialiser les buffs dans le localStorage
+//         localStorage.removeItem('nombreDeCoin');
+//         localStorage.removeItem('buff1Applied');
+//         localStorage.removeItem('buff2Applied');
+//         localStorage.removeItem('buff3Applied');
+//         localStorage.removeItem('buff4Applied');
+//         localStorage.removeItem('buffSecretApplied');
 
-        // Arrêter les intervalles actifs
-        let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
-        for (let i = 1; i < interval_id; i++) {
-            window.clearInterval(i);
-        }
+//         // Arrêter les intervalles actifs
+//         let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+//         for (let i = 1; i < interval_id; i++) {
+//             window.clearInterval(i);
+//         }
 
-        // Mettre à jour l'affichage des coins
-        AffichageDesCoins();
+//         // Mettre à jour l'affichage des coins
+//         AffichageDesCoins();
 
-        // Réinitialiser l'affichage des boutons et des visibilités
+//         // Réinitialiser l'affichage des boutons et des visibilités
      
 
    
 
-    }
-    });
-}
+//     }
+//     });
+// }
 
 // Initialisation
 IncrementerLeCompteur();
