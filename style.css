@@ -20,40 +20,6 @@ body{
     align-items: center
 }
 
-
-
-
-.box a {
-    font-size: 50px;
-}
-
-.box{
-    background: #ff0040;
-
-padding: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 380px;
-height: 400px;
-border: 5px solid rgb(117 29 70);
-
-position: relative;
-transition: transform 0.1s, box-shadow 0.1s;
-color: white;
-}
-
-.box:active {
-    transform: scale(0.95);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .box:hover {
-   background-color: #ff2600;
-  }
-
-
-
 body{
     justify-content: center;
 
@@ -62,31 +28,112 @@ body{
 }
 
 
-.aGauche{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-gap: 10px;
-margin-right: 30px;
+@font-face {
 
+    font-family:'titreFont' ;
+    src : url('font/Carton_Six.ttf') format(truetype)
+    
+    } 
+    
+    h1{
+        font-family: 'titreFont', sans-serif;
+    }
+    
+    h2{
+        font-family: 'titreFont', sans-serif;
+      
+     
+    }
+    
+    a, p{
+        font-family: 'titreFont', sans-serif;
+      
+     
+    }
+
+    /* Style de base pour le bouton */
+button.epure {
+  
+  
+    background-color: #007bff; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    border: none; /* Suppression des bordures */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police de caractère */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition fluide */
 }
 
-.margG{
-    border-radius: 10px;
-flex-direction: column;
-display: flex;
-border: 5px solid rgb(117 29 70);
+/* Effet au survol */
+button.epure:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Effet au clic */
+button.epure:active {
+    background-color: #00408d; /* Couleur de fond au clic */
+    transform: scale(0.98); /* Réduction légèrement au clic */
+}
+
+/* Effet de focus pour l'accessibilité */
+button.epure:focus {
+    outline: 2px solid #0056b3; /* Bordure de focus */
+    outline-offset: 2px; /* Décalage de la bordure de focus */
+}
+
+/* ------------------------------------ .NOMdeCLASS------------------------------------ */
+.aug{
+    bottom: 145px;
+    position: relative;
+    visibility: hidden;
+    gap: 100px;
+    }
+
+    .flex {
+    
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .gap{
+        gap: 30px;
+        display: flex;
+    }
+
+    .image{
+        width: 100px;
+        height: 100px;
+    }
+    .flou{
+        filter: blur(5px);
+        z-index: 1;
+      }
+      .color{
+        color: white;
+        font-family: 'titreFont', sans-serif;
+      }
+
+
+/* ------------------------------------ COLONNE DE GAUCHE------------------------------------ */
+
+.contourJeux{
+    background-color: #180011a2;
+    
+    border: 5px solid rgb(117 29 70);
 padding: 10px;
-color:  rgb(255,0,64);
-/* overflow:auto; */
-/* scrollbar-color: #346abf rgb(0, 0, 0); 
-scrollbar-base-color: black;
-scrollbar-width: none; */
-width: 410px;
-height: 570px;
-background-color: #180011a2;
+/*background-color: rgb(202, 202, 194);*/
+
+margin-left: 30px;
+border-radius: 10px;
+position: relative;
 }
+
+
 
 .reset{
     background-color: rgb(0, 0, 0);
@@ -213,6 +260,37 @@ width: 380px;
   }
 
 
+
+  .box a {
+    font-size: 50px;
+}
+
+.box{
+    background: #ff0040;
+
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 380px;
+height: 400px;
+border: 5px solid rgb(117 29 70);
+
+position: relative;
+transition: transform 0.1s, box-shadow 0.1s;
+color: white;
+}
+
+.box:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .box:hover {
+   background-color: #ff2600;
+  }
+
+/* ------------------------------------ COLONNE DE DROITE------------------------------------ */
 .affichageCoin{
     border-radius: 10px;
     width: 430px;
@@ -228,38 +306,32 @@ width: 380px;
   border: 5px solid rgb(117 29 70);
 }
 
-
-
-
-.aug{
-bottom: 145px;
-position: relative;
-visibility: hidden;
-gap: 100px;
-}
-
-.contourJeux{
-    background-color: #180011a2;
-    
-    border: 5px solid rgb(117 29 70);
-padding: 10px;
-/*background-color: rgb(202, 202, 194);*/
-
-margin-left: 30px;
-border-radius: 10px;
-position: relative;
-
-
-
-}
-
-.flex {
-    
+.aGauche{
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+gap: 10px;
+margin-right: 30px;
+
 }
+
+.margG{
+    border-radius: 10px;
+flex-direction: column;
+display: flex;
+border: 5px solid rgb(117 29 70);
+padding: 10px;
+color:  rgb(255,0,64);
+/* overflow:auto; */
+/* scrollbar-color: #346abf rgb(0, 0, 0); 
+scrollbar-base-color: black;
+scrollbar-width: none; */
+width: 410px;
+height: 570px;
+background-color: #180011a2;
+}
+
 
 .prendreTouteLaPlace{
     width: auto;
@@ -267,31 +339,25 @@ position: relative;
     
 }
 
-
-@font-face {
-
-font-family:'titreFont' ;
-src : url('font/Carton_Six.ttf') format(truetype)
-
-} 
-
-h1{
-    font-family: 'titreFont', sans-serif;
+#buff1:hover{
+    background-color: #ffffff;
+}
+#buff2:hover{
+    background-color: #ffffff;
+}
+#buff3:hover{
+    background-color: #ffffff;
+}
+#buff4:hover{
+    background-color: #ffffff;
 }
 
-h2{
-    font-family: 'titreFont', sans-serif;
-  
- 
-}
-
-a, p{
-    font-family: 'titreFont', sans-serif;
-  
- 
+#buffSecret1:hover{
+    background-color: #ffffff;
 }
 
 
+/* ------------------------------------ LOGO ------------------------------------ */
 .logoClickers {
     height: 125px;
     width: 155px;
@@ -333,41 +399,8 @@ bottom: 85px;
 }
 
 
-.sticky-footer {
-    height: 35px;
-    width: auto;
-    background-image: url(image/barre\ des\ taches\ windows.png);
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
-    background-position: center center; /* Centrer l'image */
-    display: flex;
-    align-items: center; /* Centre le contenu verticalement */
-    justify-content: center; /* Centre le contenu horizontalement */
-    position: sticky; /* Position sticky */
-    bottom: 0; /* Collé en bas */
-    margin-top: auto; /* Assure que le footer est toujours en bas */
-}
 
-.sticky-footer p {
-    margin: 0; /* Retire les marges par défaut */
-}
-
-#buff1:hover{
-    background-color: #ffffff;
-}
-#buff2:hover{
-    background-color: #ffffff;
-}
-#buff3:hover{
-    background-color: #ffffff;
-}
-#buff4:hover{
-    background-color: #ffffff;
-}
-
-#buffSecret1:hover{
-    background-color: #ffffff;
-}
+/* ------------------------------------ COLONNE CENTRALE------------------------------------ */
 
 .github{
     margin: 0;
@@ -376,15 +409,17 @@ bottom: 85px;
     align-items: center;
 }
 
-.image{
-    width: 100px;
-    height: 100px;
-}
+
 
 .github a {
     color: #ffffff;
     text-decoration: none;
 }
+
+
+/*---------------------------------------POPUP-------------------------------------------*/
+
+
 .confirmationDiv{
     color: white;
     background: rgb(255,0,64);
@@ -403,52 +438,28 @@ bottom: 85px;
     justify-content: space-around;
     border-radius: 10px;
 }
-.gap{
-    gap: 30px;
+
+
+/*---------------------------------------FOOTER-------------------------------------------*/
+
+/*
+.sticky-footer {
+    height: 35px;
+    width: auto;
+    background-image: url(image/barre\ des\ taches\ windows.png);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
     display: flex;
-}
-/* Style de base pour le bouton */
-button.epure {
-  
-  
-    background-color: #007bff; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
-    border: none; /* Suppression des bordures */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px 20px; /* Espacement intérieur */
-    font-size: 16px; /* Taille de la police */
-    font-family: Arial, sans-serif; /* Police de caractère */
-    cursor: pointer; /* Curseur en forme de main */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition fluide */
+    align-items: center; 
+    justify-content: center; 
+    position: sticky;
+    bottom: 0;
+    margin-top: auto; 
 }
 
-/* Effet au survol */
-button.epure:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
-}
+.sticky-footer p {
+    margin: 0; 
+} 
 
-/* Effet au clic */
-button.epure:active {
-    background-color: #00408d; /* Couleur de fond au clic */
-    transform: scale(0.98); /* Réduction légèrement au clic */
-}
-
-/* Effet de focus pour l'accessibilité */
-button.epure:focus {
-    outline: 2px solid #0056b3; /* Bordure de focus */
-    outline-offset: 2px; /* Décalage de la bordure de focus */
-}
-
-
-/*---------------------------------------Animation-------------------------------------------*/
-
-
-
-  .flou{
-    filter: blur(5px);
-    z-index: 1;
-  }
-  .color{
-    color: white;
-    font-family: 'titreFont', sans-serif;
-  }
+*/

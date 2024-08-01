@@ -4,25 +4,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let logoClicker = document.getElementById('logo');
 let visible1 = document.getElementById('cacher');
 let logoClicker2 = document.getElementById('logo2');
@@ -139,7 +120,6 @@ resetStorage.addEventListener('click',function(){
     })
 
 
-
     non2.addEventListener('click', function(){
         confirmationReset.style.visibility = 'hidden';
         
@@ -149,21 +129,6 @@ resetStorage.addEventListener('click',function(){
 
 })
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let nombreDeCoin = localStorage.getItem('nombreDeCoin') ? parseInt(localStorage.getItem('nombreDeCoin')) : 0;
 let unParUn = 1;
@@ -214,15 +179,12 @@ if (buffSecretApplied === true){
 
 
 
-
-// Fonction pour mettre à jour le nombre de coins et le localStorage
 function AffichageDesCoins() {
     let affichageCoin = document.getElementById('affichageCoin');
     affichageCoin.textContent = 'Nombre de coins: ' + nombreDeCoin;
     localStorage.setItem('nombreDeCoin', nombreDeCoin);
 }
 
-// Fonction pour gérer l'incrément du compteur
 function IncrementerLeCompteur() {
     let ajoutCoin = document.getElementById('ajoutCoin');
 
@@ -264,7 +226,7 @@ function IncrementerLeCompteur() {
     });
 }
 
-// Fonction pour appliquer le Buff1
+
 function Buff1() {
     unParUn += 10;
     nombreDeCoin -= 10;
@@ -273,7 +235,6 @@ function Buff1() {
     localStorage.setItem('buff1Applied', 'true');
 }
 
-// Fonction pour appliquer le Buff2
 function Buff2() {
     nombreDeCoin -= 100;
     AffichageDesCoins();
@@ -286,7 +247,7 @@ function Buff2() {
     localStorage.setItem('buff2Applied', 'true');
 }
 
-// Fonction pour appliquer le Buff3
+
 function Buff3() {
     unParUn += 1000;
     nombreDeCoin -= 1000;
@@ -295,7 +256,7 @@ function Buff3() {
     localStorage.setItem('buff3Applied', 'true');
 }
 
-// Fonction pour appliquer le Buff4
+
 function Buff4() {
     nombreDeCoin -= 10000;
     AffichageDesCoins();
@@ -317,80 +278,3 @@ function SecretBuff(){
     buffSecretApplied = true;
     localStorage.setItem('buffSecretApplied', 'true');
 }
-
-// Fonction pour réinitialiser le jeu
-// Fonction pour réinitialiser le jeu
-// Fonction pour réinitialiser le jeu
-// function Reset() {
-//     // let resetStorage = document.getElementById('reset');
-    
-//     resetStorage.addEventListener("click", function() {
-//         // let resetConf = confirm('Etes vous sur de vouloir reintialiser le compteur?')
-
-//         if (oui2){
-//         // Réinitialiser les valeurs locales
-//         nombreDeCoin = 0;
-//         unParUn = 1;
-//         buff1Applied = false;
-//         buff2Applied = false;
-//         buff3Applied = false;
-//         buff4Applied = false;
-//         buffSecretApplied = false;
-
-//         // Réinitialiser les buffs dans le localStorage
-//         localStorage.removeItem('nombreDeCoin');
-//         localStorage.removeItem('buff1Applied');
-//         localStorage.removeItem('buff2Applied');
-//         localStorage.removeItem('buff3Applied');
-//         localStorage.removeItem('buff4Applied');
-//         localStorage.removeItem('buffSecretApplied');
-
-//         // Arrêter les intervalles actifs
-//         let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
-//         for (let i = 1; i < interval_id; i++) {
-//             window.clearInterval(i);
-//         }
-
-//         // Mettre à jour l'affichage des coins
-//         AffichageDesCoins();
-
-//         // Réinitialiser l'affichage des boutons et des visibilités
-     
-
-   
-
-//     }
-//     });
-// }
-
-// Initialisation
-IncrementerLeCompteur();
-AffichageDesCoins();
-Reset();
-
-
-// ANIMATION
-
-
-
-// // Auto Clicker en JavaScript
-// (function() {
-//     // Intervalle de temps entre chaque clic en millisecondes
-//     var interval = 500; // 1000 ms = 1 seconde
-
-//     // Fonction de clic automatique
-//     function autoClick() {
-//         // Sélectionne le bouton ou l'élément que tu veux cliquer
-//         var button = document.getElementById('ajoutCoin'); // Modifie ce sélecteur selon tes besoins
-
-//         if (button) {
-//             button.click();
-//             console.log('Button clicked!');
-//         } else {
-//             console.log('Button not found!');
-//         }
-//     }
-
-//     // Démarre l'auto clicker
-//     setInterval(autoClick, interval);
-// })();
