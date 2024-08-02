@@ -10,6 +10,8 @@ let logoClicker2 = document.getElementById('logo2');
 let logoClicker3 = document.getElementById('logo1');
 let tempsChargement = document.getElementById('chargement');
 
+
+
 logoClicker.addEventListener('click', function() {
     logoClicker3.style.visibility = 'hidden';
     logoClicker.style.visibility = 'hidden';
@@ -17,18 +19,18 @@ logoClicker.addEventListener('click', function() {
     tempsChargement.style.visibility = 'visible';
     tempsChargement.classList.add('fadeInDownBig');
     tempsChargement.classList.remove('fadeOutDownBig');
-    visible1.classList.remove('fadeOutLeftBig')
+    visible1.classList.remove('fadeOutLeftBig');
     visible1.classList.remove('fadeInRightBig');
 
     setTimeout(function() {
         visible1.style.visibility = 'visible';
-        visible1.classList.add('fadeInRightBig')
+        visible1.classList.add('fadeInRightBig');
        
         tempsChargement.classList.remove('fadeInDownBig');
         tempsChargement.classList.add('fadeOutDownBig');
         setTimeout(function(){
             tempsChargement.style.visibility = 'hidden';
-        },1000)
+        },1000);
     }, 3000);
 });
 
@@ -55,8 +57,8 @@ close.addEventListener('click', function(){
         logoClicker2.style.visibility = 'visible';
         confirmationHtml.style.visibility = 'hidden';
         logoClicker3.style.visibility = 'visible';
-        visible1.classList.remove('flou')
-    },1000)
+        visible1.classList.remove('flou');
+    },1000);
 
    
 })
@@ -64,13 +66,13 @@ close.addEventListener('click', function(){
 non.addEventListener('click', function(){
     confirmationHtml.style.visibility = 'hidden';
     
-    visible1.classList.remove('flou')
+    visible1.classList.remove('flou');
 })
 
 })
 
 
-let confirmationReset = document.getElementById('confirmationReset')
+let confirmationReset = document.getElementById('confirmationReset');
 let resetStorage = document.getElementById('reset');
 let oui2 = document.getElementById('oui2');
 let non2 = document.getElementById('non2');
@@ -106,15 +108,11 @@ resetStorage.addEventListener('click',function(){
             let interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
             for (let i = 1; i < interval_id; i++) {
                 window.clearInterval(i);
-            }
+            };
     
             // Mettre à jour l'affichage des coins
             AffichageDesCoins();
     
-            // Réinitialiser l'affichage des boutons et des visibilités
-         
-    
-       
     
         }
     })
@@ -123,11 +121,11 @@ resetStorage.addEventListener('click',function(){
     non2.addEventListener('click', function(){
         confirmationReset.style.visibility = 'hidden';
         
-        visible1.classList.remove('flou')
-    })
+        visible1.classList.remove('flou');
+    });
 
 
-})
+});
   
 
 let nombreDeCoin = localStorage.getItem('nombreDeCoin') ? parseInt(localStorage.getItem('nombreDeCoin')) : 0;
@@ -278,3 +276,7 @@ function SecretBuff(){
     buffSecretApplied = true;
     localStorage.setItem('buffSecretApplied', 'true');
 }
+
+IncrementerLeCompteur();
+AffichageDesCoins();
+Reset();

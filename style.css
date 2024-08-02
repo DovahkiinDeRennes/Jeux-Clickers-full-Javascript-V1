@@ -385,20 +385,66 @@ background-color: #180011a2;
     flex-direction: column; /* Arrange les enfants en colonne */
     align-items: center; /* Centre les enfants horizontalement */
     justify-content: center; /* Centre les enfants verticalement si nécessaire */
-    
+    animation: pulse 1s ease-in-out 0s infinite normal none;
 /*right: 215px;*/
 margin: 0;
     position: relative;
 bottom: 85px;
 }
 
+
+.toutLogo:hover{
+
+    animation:step-end;
+}
+
 .logoClickers:hover{
     filter: brightness(70%) saturate(545%) contrast(97%);
     -webkit-filter: brightness(70%) saturate(545%) contrast(97%);
     -moz-filter: brightness(70%) saturate(545%) contrast(97%);
+    
 }
 
 
+
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    }
+    @keyframes pulse {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    } 
+  
 
 /* ------------------------------------ COLONNE CENTRALE------------------------------------ */
 
@@ -407,9 +453,12 @@ bottom: 85px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.5s ease-in-out; 
 }
 
-
+.github:hover{
+    transform: scale(1.4);
+}
 
 .github a {
     color: #ffffff;
@@ -438,6 +487,22 @@ bottom: 85px;
     justify-content: space-around;
     border-radius: 10px;
 }
+
+
+
+/*---------------------------------------TEST-------------------------------------------*/
+
+.test{
+
+    border-top: 10px ridge rgb(117 29 70);
+    border-bottom: 10px groove rgb(117 29 70);
+    padding: 35px;
+    border-radius: 80px;
+    background-color: rgba(105, 51, 65, 0.678)
+}
+
+
+
 
 
 /*---------------------------------------FOOTER-------------------------------------------*/

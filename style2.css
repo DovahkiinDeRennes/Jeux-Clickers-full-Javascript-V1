@@ -1,0 +1,230 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family:'titreFont';
+}
+
+@font-face {
+
+    font-family:'titreFont' ;
+    src : url('font/Carton_Six.ttf') format(truetype)
+    
+    } 
+
+.image{
+    width: 100px;
+    height: 100px;
+}
+
+.flex{
+    display: flex;
+}
+
+/* 
+.borderCentrale{
+    border: 1px solid black;
+} */
+
+.boxCentrale{
+    width: 840px;
+    height: 860px;
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+.boxHeader{
+    width: 820px;
+    height: 150px;
+    /* background-color: rgb(172, 230, 14); */
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-top: 10px groove #ffd650;
+    border-bottom: 10px ridge  #ffd650;
+}
+
+.boxAffichageCoins{
+    height: 150px;
+    width: 300px;
+    background-color: rgb(255, 231, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.boxTitre{
+    height: 150px;
+    width: 300px;
+    background-color: rgb(255, 231, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.boxGithub{
+    height: 150px;
+    width: 200px;
+    background-color: rgb(255, 231, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+
+.boxBuffAndCoins{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.boxBuff{
+    width: 200px;
+    height: 500px;
+    /* background-color: rgb(14, 230, 183); */
+    display: flex;
+    flex-direction: column;
+    border-right: 10px ridge #ffd650;
+    border-left: 10px groove #ffd650;
+    gap: 5px;
+    padding: 10px;
+}
+
+
+.Buff, .Buff2, .Buff3, .Buff4, .Buff5{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.Buff:hover, .Buff2:hover, .Buff3:hover, .Buff4:hover, .Buff5:hover {
+    background-color: rgb(255, 231, 12);
+    color: black;
+}
+
+.boxCoins{
+
+    width: 570px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 10px groove #ffd650;
+    border-right: 10px ridge #ffd650;
+    border-bottom: 10px ridge #ffd650;
+    border-left: 10px groove #ffd650;
+    /* background-color: rgba(0, 255, 255, 0.63); */
+}
+.Coins{
+    background-color: black;
+    width: 460px;
+    height: 360px;
+    clip-path: ellipse(40% 50%);
+}
+.Coins:hover{
+    background-color: rgb(255, 231, 12);
+}
+
+.Coins:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+.boxFooter{
+    width: 840px;
+    height: 150px;
+    /* background-color: rgb(230, 93, 14); */
+    display: flex;
+    border-top: 10px groove #ffd650;
+    border-bottom: 10px ridge #ffd650;
+    gap: 20px;
+    padding: 10px;
+}
+.boxFooterExit{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(230, 28, 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.boxFooterExit:hover{
+    animation: customAni 1s ease-in-out 0s infinite normal none;
+}
+
+.boxFooterReset{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(230, 111, 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.boxFooterReset:hover{
+    animation: customAni 1s ease-in-out 0s infinite normal none;
+}
+
+@keyframes customAni {
+    0% {
+      transform: translate(0);
+    }
+  
+    10% {
+      transform: translate(-2px, -2px);
+    }
+  
+    20% {
+      transform: translate(2px, -2px);
+    }
+  
+    30% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(2px, 2px);
+    }
+  
+    50% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, -2px);
+    }
+  
+    70% {
+      transform: translate(-2px, 2px);
+    }
+  
+    80% {
+      transform: translate(-2px, -2px);
+    }
+  
+    90% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
