@@ -4,13 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFONTE GRAPHIQUE</title>
     <link rel="stylesheet" media="screen" type="text/css" href="style2.css"/>
+   
 </head>
 <body>
     
-
-
-
-
 <div class="flex boxCentrale">
 
 
@@ -19,7 +16,7 @@
 
 <div class="boxAffichageCoins">
     <h1>Nombre de coins :</h1>
-    <h2>55665648</h2>
+    <h2 id="afficherLesCoins"></h2>
 </div>
 <div class="boxTitre">
     <h1>COINS CLICKERS</h1>
@@ -37,30 +34,32 @@
 <div class="boxBuffAndCoins">
 <div class="boxBuff">
 
-<div class="Buff">
+<div class="Buff"  id="buff1">
 <h2>+10 = 10 COINS</h2>
 </div>
 
-<div class="Buff2">
+<div class="Buff2" id="buff2">
     <h2>+1 -> 2 secondes</h2>
     </div>
 
-    <div class="Buff3">
+    <div class="Buff3" id="buff3">
         <h2>+1000</h2>
         </div>
 
-        <div class="Buff4">
+        <div class="Buff4" id="buff4">
             <h2>+100 -> 5 secondes</h2>
             </div>
 
-            <div class="Buff5">
+            <div class="Buff5" id="buffSecret1">
                 <h2>Secret</h2>
                 </div>
 </div>
 
 
 <div class="boxCoins">
-    <div class="Coins"></div>
+    <div class="Coins" id="ajouterCoin">
+        <h1>CLIQUE ICI</h1>
+    </div>
 </div>
 
 </div>
@@ -68,7 +67,7 @@
 <div class="boxFooterExit">
     <h2>EXIT</h2>
 </div>
-<div class="boxFooterReset">
+<div class="boxFooterReset" id="reset">
     <h2>RESET</h2>
 </div>
 </div>
@@ -79,6 +78,6 @@
 </div>
 
 
-
+<script src="app2.js"></script>
 </body>
 </html>
