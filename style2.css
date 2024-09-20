@@ -107,12 +107,14 @@ body{
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    
 }
 
 .Buff:hover, .Buff2:hover, .Buff3:hover, .Buff4:hover, .Buff5:hover {
     background-color: rgb(255, 231, 12);
     color: black;
+    border: rgb(0, 0, 0) dashed  2px;
 }
 
 .boxCoins{
@@ -130,17 +132,19 @@ body{
 }
 .Coins{
     background-color: black;
-    width: 460px;
+    width: 370px;
     height: 360px;
-    clip-path: ellipse(40% 50%);
+    clip-path: ellipse(50% 50%);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 100%
 }
 .Coins:hover{
     background-color: rgb(255, 231, 12);
     color: black;
+    border: rgb(0, 0, 0) dashed  3px;
 }
 
 .Coins:active {
@@ -181,13 +185,11 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-   
-  
 }
 
 .boxFooterReset:hover{
     animation: customAni 1s ease-in-out 0s infinite normal none;
-    border: rgb(0, 0, 0) dashed  3px;
+    border: rgb(0, 0, 0) dashed  2px;
 }
 
 @keyframes customAni {
