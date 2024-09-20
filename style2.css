@@ -151,14 +151,15 @@ body{
 
 
 .boxFooter{
-    width: 840px;
+    width: 845px;
     height: 150px;
     /* background-color: rgb(230, 93, 14); */
     display: flex;
     border-top: 10px groove #ffd650;
     border-bottom: 10px ridge #ffd650;
-    gap: 20px;
+    gap: 16px;
     padding: 10px;
+   
 }
 .boxFooterExit{
     width: 400px;
@@ -170,9 +171,7 @@ body{
     border-radius: 5px;
 }
 
-.boxFooterExit:hover{
-    animation: customAni 1s ease-in-out 0s infinite normal none;
-}
+
 
 .boxFooterReset{
     width: 400px;
@@ -182,10 +181,13 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+   
+  
 }
 
 .boxFooterReset:hover{
     animation: customAni 1s ease-in-out 0s infinite normal none;
+    border: rgb(0, 0, 0) dashed  3px;
 }
 
 @keyframes customAni {
@@ -233,3 +235,24 @@ body{
       transform: translate(0);
     }
   }
+
+/* 
+  .confirmationDiv{
+    color: white;
+    background: rgb(255,0,64);
+    border: 5px solid rgb(117 29 70);
+    visibility: hidden;
+    width: 215px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    top:300px;
+  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+} */
+

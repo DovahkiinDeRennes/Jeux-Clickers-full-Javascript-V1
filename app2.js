@@ -1,4 +1,30 @@
 
+// let fermerJeux = document.getElementById('close');
+// let confirmationDiv = document.getElementById('confirmation');
+// let oui = document.getElementById('oui');
+// let non = document.getElementById('non');
+
+
+
+// fermerJeux.addEventListener('click', function(){
+   
+// confirmationDiv.style.visibility = 'visible';
+
+// if (oui){
+//     confirmationDiv.style.visibility = 'hidden';
+// }
+
+// if (non){
+//     confirmationDiv.style.visibility = 'hidden';
+// }
+
+//  })
+
+
+
+
+
+
 let reset = document.getElementById('reset');
 
 reset.addEventListener('click', function(){
